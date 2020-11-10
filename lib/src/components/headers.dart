@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 
-class Headers extends StatefulWidget{
-
-  @override
-  _HeadersState createState() => _HeadersState();
-}
-
-class _HeadersState extends State<Headers> {
+class Headers extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget> [
+        Column(
+          children: <Widget> [
+            Text(
+                'Laços Fofos da Cris',
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w400,
+                ),
+            )
+          ],
+        ),
+        Icon(Icons.notifications),
+      ],
+    );
   }
 }

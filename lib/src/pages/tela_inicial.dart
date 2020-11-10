@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lacos/src/components/headers.dart';
 
 class TelaInicial extends StatefulWidget{
   @override
@@ -12,19 +13,7 @@ class _TelaInicialState extends State<TelaInicial> {
       body: ListView(
         padding: EdgeInsets.only(left: 20.0, top: 20.0, right: 20.0),
         children: <Widget> [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget> [
-              Column(
-                children: <Widget> [
-                  Text(
-                    'Laços Fofos da Cris'
-                  )
-                ],
-              ),
-              Icon(Icons.notifications),
-            ],
-          )
+          Headers(),
         ],
       ),
     );
