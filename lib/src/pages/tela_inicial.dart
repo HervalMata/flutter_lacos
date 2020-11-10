@@ -10,8 +10,10 @@ class _TelaInicialState extends State<TelaInicial> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
+        padding: EdgeInsets.only(left: 20.0, top: 20.0, right: 20.0),
         children: <Widget> [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget> [
               Column(
                 children: <Widget> [
@@ -19,7 +21,8 @@ class _TelaInicialState extends State<TelaInicial> {
                     'Laços Fofos da Cris'
                   )
                 ],
-              )
+              ),
+              Icon(Icons.notifications),
             ],
           )
         ],
