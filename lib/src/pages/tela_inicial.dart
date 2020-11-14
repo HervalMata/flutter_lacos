@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lacos/src/components/categories.dart';
 import 'package:flutter_lacos/src/components/headers.dart';
 
 class TelaInicial extends StatefulWidget{
@@ -14,6 +15,7 @@ class _TelaInicialState extends State<TelaInicial> {
         padding: EdgeInsets.only(left: 20.0, top: 30.0, right: 20.0),
         children: <Widget> [
           Headers(),
+          Category(),
         ],
       ),
     );
