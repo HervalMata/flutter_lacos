@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lacos/src/components/category_card.dart';
 import 'package:flutter_lacos/src/models/categories_model.dart';
 
 class Category extends StatelessWidget{
@@ -12,7 +13,13 @@ class Category extends StatelessWidget{
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: _categories.length,
-          itemBuilder: null
+          itemBuilder: (BuildContext context, int index){
+            return CategoryCard(
+              name: _categories[index].name,
+              image: _categories[index].image,
+              totalProducts: _categories[index].totalProducts,
+            );
+          }
       ),
     );
   }
