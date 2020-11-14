@@ -8,8 +8,21 @@ class CategoryCard extends StatelessWidget{
   CategoryCard({this.name, this.image, this.totalProducts});
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Container(
+      margin: EdgeInsets.only(right: 20.0),
+      child: Card(
+        child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+            child: Row(
+              children: <Widget> [
+                Image(
+                    image: AssetImage(image),
+                )
+              ],
+            ),
+        ),
+      ),
+    );
   }
   
 }
