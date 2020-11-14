@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lacos/src/components/categories.dart';
 import 'package:flutter_lacos/src/components/headers.dart';
+import 'package:flutter_lacos/src/components/search.dart';
 
 class TelaInicial extends StatefulWidget{
   @override
@@ -16,6 +17,7 @@ class _TelaInicialState extends State<TelaInicial> {
         children: <Widget> [
           Headers(),
           Category(),
+          Search(),
         ],
       ),
     );
