@@ -3,6 +3,6 @@ class CategoriesModel {
   final String image;
   final int totalProducts;
 
-  CategoriesModel(this.name, this.image, this.totalProducts);
+  CategoriesModel({this.name, this.image, this.totalProducts});
 
 }
