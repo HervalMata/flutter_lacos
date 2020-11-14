@@ -17,6 +17,28 @@ class CategoryCard extends StatelessWidget{
               children: <Widget> [
                 Image(
                     image: AssetImage(image),
+                    height: 65.0,
+                    width: 65.0,
+                ),
+                SizedBox(width: 20.0,),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget> [
+                    Text(
+                      name,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15.0
+                      ),
+                    ),
+                    Text(
+                      "$totalProducts Produtos",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0
+                      ),
+                    )
+                  ],
                 )
               ],
             ),
