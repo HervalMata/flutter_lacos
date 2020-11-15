@@ -58,8 +58,16 @@ class _TelaInicialState extends State<TelaInicial> {
 
   Widget _productsItens(Products products){
     return Container(
-      margin: EdgeInsets.only(bottom: 20.0),
-      child: ProductCard(),
+      margin: EdgeInsets.only(bottom: 26.0),
+      child: ProductCard(
+        id: products.id,
+        name: products.name,
+        image: products.image,
+        category: products.category,
+        price: products.price,
+        discount: products.discount,
+        reviews: products.reviews,
+      ),
     );
   }
 }
