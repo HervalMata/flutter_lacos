@@ -9,7 +9,8 @@ class CategoriesPage extends StatefulWidget{
 class _CategoriesPageState extends State<CategoriesPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Center(
+      child: Text("Categorias"),
+    );
   }
 }

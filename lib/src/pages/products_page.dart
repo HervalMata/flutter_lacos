@@ -9,7 +9,8 @@ class ProductsPage extends StatefulWidget{
 class _ProductsPageState extends State<ProductsPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Center(
+      child: Text("Produtos"),
+    );
   }
 }

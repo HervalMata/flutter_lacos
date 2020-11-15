@@ -9,7 +9,8 @@ class CartPage extends StatefulWidget{
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return Center(
+      child: Text("Carrinho"),
+    );
   }
 }

@@ -31,7 +31,17 @@ class _TabsState extends State<Tabs> {
   }
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.white,
+            elevation: 0,
+            iconTheme: IconThemeData(color: Colors.black),
+            title: Text(
+              pageNow == 0 ? "Meu Aplicativo"
+            )
+          ),
+        )
+    );
   }
 }
