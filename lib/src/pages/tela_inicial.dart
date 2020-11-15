@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_lacos/src/components/categories.dart';
 import 'package:flutter_lacos/src/components/headers.dart';
 import 'package:flutter_lacos/src/components/search.dart';
+import 'package:flutter_lacos/src/models/products_model.dart';
 
 class TelaInicial extends StatefulWidget{
   @override
@@ -9,6 +10,7 @@ class TelaInicial extends StatefulWidget{
 }
 
 class _TelaInicialState extends State<TelaInicial> {
+  List<ProductsModel> _products = products;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,9 +45,17 @@ class _TelaInicialState extends State<TelaInicial> {
                 ),
               )
             ],
+          ),
+          SizedBox(height: 20.0,),
+          Column(
+            children: _products.map(_productsItens).toList(),
           )
         ],
       ),
     );
+  }
+
+  Widget _productsItens(){
+    return Container()
   }
 }
