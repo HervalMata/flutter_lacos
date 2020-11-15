@@ -34,19 +34,49 @@ class _TabsState extends State<Tabs> {
     return SafeArea(
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.pinkAccent,
             elevation: 0,
             iconTheme: IconThemeData(color: Colors.black),
             title: Text(
-              pageNow == 0 ? "Meu Aplicativo" : pageNow == 1 ? "Carrinho"
-                  : pageNow == 2 ? "Produtos" : "Categorias",
+              tabNow == 0 ? "Home" : tabNow == 1 ? "Carrinho"
+                  : tabNow == 2 ? "Produtos" : "Categorias",
               style: TextStyle(
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 15.0,
                 fontWeight: FontWeight.bold
               ),
             ),
             centerTitle: true,
+            actions: <Widget> [
+              IconButton(
+                  icon: Icon(
+                      Icons.notifications_none,
+                      color: Colors.white,
+                  ),
+                  onPressed: (){
+
+                  }
+              ),
+              IconButton(
+                  icon: Icon(
+                    Icons.shopping_cart,
+                    color: Colors.white,
+                  ),
+                  onPressed: (){
+
+                  }
+              ),
+            ],
+          ),
+          resizeToAvoidBottomPadding: false,
+          bottomNavigationBar: BottomNavigationBar(
+            currentIndex: tabNow,
+            onTap: (index) {
+              setState(() {
+                tabNow = index;
+                pageNow = pages[index];
+              });
+            },
           ),
         )
     );
