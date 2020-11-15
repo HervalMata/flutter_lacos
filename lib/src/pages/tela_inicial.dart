@@ -18,6 +18,32 @@ class _TelaInicialState extends State<TelaInicial> {
           Headers(),
           Category(),
           Search(),
+          SizedBox(height: 20.0,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget> [
+              Text(
+                "Produtos Mais Vendidos",
+                style: TextStyle(
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  print("'Pressionou' preassed");
+                },
+                child: Text(
+                  "Ver Todos",
+                  style: TextStyle(
+                    color: Colors.orangeAccent,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16.0,
+                  ),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
