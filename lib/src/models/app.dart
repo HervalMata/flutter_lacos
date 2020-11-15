@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lacos/src/pages/tela_inicial.dart';
+import 'package:flutter_lacos/src/tabs/tabs.dart';
 
 class App extends StatelessWidget{
   @override
@@ -7,7 +8,7 @@ class App extends StatelessWidget{
     return MaterialApp(
       title: 'Laços da Cris',
       theme: ThemeData(primaryColor: Colors.pinkAccent),
-      home: TelaInicial(),
+      home: Tabs(),
     );
   }
 }

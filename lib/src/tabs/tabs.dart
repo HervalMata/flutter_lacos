@@ -38,8 +38,15 @@ class _TabsState extends State<Tabs> {
             elevation: 0,
             iconTheme: IconThemeData(color: Colors.black),
             title: Text(
-              pageNow == 0 ? "Meu Aplicativo"
-            )
+              pageNow == 0 ? "Meu Aplicativo" : pageNow == 1 ? "Carrinho"
+                  : pageNow == 2 ? "Produtos" : "Categorias",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 15.0,
+                fontWeight: FontWeight.bold
+              ),
+            ),
+            centerTitle: true,
           ),
         )
     );
