@@ -77,7 +77,35 @@ class _TabsState extends State<Tabs> {
                 pageNow = pages[index];
               });
             },
+            type: BottomNavigationBarType.fixed,
+            items: <BottomNavigationBarItem> [
+              BottomNavigationBarItem(
+                  icon: Icon(
+                    Icons.home,
+                  ),
+                  title: Text("Home"),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.shopping_cart,
+                ),
+                title: Text("Carrinho"),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.photo_library,
+                ),
+                title: Text("Produtos"),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.list,
+                ),
+                title: Text("Categorias"),
+              ),
+            ],
           ),
+          body: pageNow,
         )
     );
   }
