@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_lacos/src/components/cart_card.dart';
+import 'package:flutter_lacos/src/pages/login_page.dart';
 
 class CartPage extends StatefulWidget{
 
@@ -107,7 +108,11 @@ class _CartPageState extends State<CartPage> {
           SizedBox(height: 20.0,),
           GestureDetector(
             onTap: (){
-
+              Navigator.of(context).push(
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => LoginPage()
+                  )
+              );
             },
             child: Container(
               height: 50.0,
