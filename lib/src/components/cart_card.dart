@@ -89,7 +89,7 @@ class _CartCardState extends State<CartCard> {
                 ),
                 SizedBox(height: 5.0,),
                 Text(
-                  "10,00",
+                  "R\u{0024} 10,00",
                   style: TextStyle(
                       fontSize: 16.0,
                       color: Colors.pinkAccent,
