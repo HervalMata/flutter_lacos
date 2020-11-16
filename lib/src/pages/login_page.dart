@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_lacos/src/components/button.dart';
+import 'package:flutter_lacos/src/pages/register_page.dart';
 
 class LoginPage extends StatefulWidget{
 
@@ -51,15 +52,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 10.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget> [
-            Image(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget> [
+              Image(
                 image: AssetImage("assets/images/login.gif"),
                 height: 140.0,
                 width: 140.0,
             ),
-            SizedBox(height: 15.0,),
             SizedBox(height: 20.0,),
             Card(
               elevation: 5.0,
@@ -72,16 +72,61 @@ class _LoginPageState extends State<LoginPage> {
                       _passwordTextField(),
                     ],
                   ),
-              ),
+                ),
             ),
             SizedBox(height: 30.0,),
             Button(btnText: "Logar"),
             Divider(
-              height: 20.0,
-            )
-          ],
+              height: 35.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget> [
+                Text(
+                  "Não possui cadastro?",
+                  style: TextStyle(
+                    color: Color(0XFFBDC2CB),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                  ),
+                ),
+                SizedBox(width: 10.0,),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => RegisterPage()
+                        )
+                    );
+                  },
+                  child: Text(
+                    "Cadastre-se",
+                    style: TextStyle(
+                      color: Colors.pinkAccent,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 30.0,),
+            Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget> [
+                  Text(
+                    "Recuperar Senha?",
+                    style: TextStyle(
+                        fontSize: 15.0,
+                        color: Colors.pinkAccent,
+                        fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-      ),
     );
   }
 }
