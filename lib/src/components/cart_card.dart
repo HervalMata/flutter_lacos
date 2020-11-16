@@ -76,6 +76,73 @@ class _CartCardState extends State<CartCard> {
               ),
             ),
             SizedBox(width: 20.0,),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget> [
+                Text(
+                  "Laços nº1",
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+                Text(
+                  "10,00",
+                  style: TextStyle(
+                      fontSize: 16.0,
+                      color: Colors.pinkAccent,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+                SizedBox(height: 5.0,),
+                Container(
+                  height: 25.0,
+                  width: 120.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget> [
+                      Row(
+                        children: <Widget> [
+                          Text(
+                            "Laços",
+                            style: TextStyle(
+                              color: Color(0xFFD3D3D3),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 5.0,),
+                          InkWell(
+                            onTap: (){
+
+                            },
+                            child: Text(
+                              "x",
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 10.0,),
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+            Spacer(),
+            GestureDetector(
+              onTap: (){
+
+              },
+              child: Icon(
+                Icons.cancel,
+                color: Colors.grey,
+              ),
+            )
           ],
         ),
       ),
